@@ -33,6 +33,15 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+# Bootstrap is a toolkit from Twitter designed to kickstart development of web
+# apps and sites. It includes base CSS and HTML for typography, forms, buttons,
+# tables, grids, navigation, and more.
+gem "twitter-bootstrap-rails"
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
 # Image upload
 gem 'cloudinary'
 
