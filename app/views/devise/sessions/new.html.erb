@@ -1,0 +1,25 @@
+<div class='container'>
+  <div class='row justify-content-md-center'>
+
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class='form-label-group'>
+              <label for='recipient-name' class='col-form-label'>E-mail:</label>
+              <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'E-mail', autocomplete: false %>
+            </div>
+
+            <div class='form-label-group'>
+              <label for='recipient-name' class='col-form-label'>Senha:</label>
+              <%= f.password_field :password, class: 'form-control', placeholder: 'Senha' %>
+            </div>
+
+            <div style='float: right; margin-top: 10px;'>
+              <button type='button' class='btn btn-primary' data-dismiss='modal'>Voltar</button>
+              <!--button type='button' class='btn btn-success'>Entrar</button-->
+              <%= f.submit 'Entrar', class: 'btn btn-outline-success' %>
+            </div>
+          <% end %>
+  </div>
+</div>
+
+<%= render 'devise/shared/links' %>

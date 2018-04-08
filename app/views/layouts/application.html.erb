@@ -10,6 +10,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if !admin_signed_in? %>
+      <%= yield %>
+    <% else %>
+    <div class='flexbox-wrapper'>
+      <div class='sidebar'>
+        <%= render 'shared/sidemenu' %>
+      </div>
+
+      <div class='content'>
+        <div class='ui container'>
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
   </body>
 </html>

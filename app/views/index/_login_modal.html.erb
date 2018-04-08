@@ -1,0 +1,25 @@
+<div class='modal fade' id='loginModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-sm' role='document'>
+    <div class='modal-content'>
+      <%= form_for(:admin, url: session_path(:admin)) do |f| %>
+        <div class='modal-body'>
+          <div class='form-group'>
+            <label for='recipient-name' class='col-form-label'>E-mail:</label>
+            <!--input type='text' maxlength='30' class='form-control' id='recipient-name'-->
+            <%= f.email_field :email, class: 'form-control', required: true, autofocus: true, placeholder: 'E-mail' %>
+          </div>
+          <div class='form-group'>
+            <label for='message-text' class='col-form-label'>Senha:</label>
+            <!--input type='password' maxlength='20' class='form-control' id='recipient-name'-->
+            <%= f.password_field :password, class: 'form-control', required: true, placeholder: 'Senha' %>
+          </div>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-outline-primary' data-dismiss='modal'>Cancelar</button>
+          <!--button type='button' class='btn btn-success'>Entrar</button-->
+          <%= f.submit 'Entrar', class: 'btn btn-outline-success' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

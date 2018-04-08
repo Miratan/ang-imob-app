@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+  repo_name = '#{repo_name}/#{repo_name}' unless repo_name.include?('/')
+  'https://github.com/#{repo_name}.git'
 end
 
 
@@ -37,7 +37,13 @@ gem 'jbuilder', '~> 2.5'
 # Bootstrap is a toolkit from Twitter designed to kickstart development of web
 # apps and sites. It includes base CSS and HTML for typography, forms, buttons,
 # tables, grids, navigation, and more.
-gem "twitter-bootstrap-rails"
+# gem 'therubyracer'
+# gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+# gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+# Is an Sass-powered version of Semantic UI and ready to drop into Rails, Compass, or Sprockets.
+gem 'semantic-ui-sass'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -47,6 +53,9 @@ gem 'cloudinary'
 
 # Carrierwave
 gem 'carrierwave'
+
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

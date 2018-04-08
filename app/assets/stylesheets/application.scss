@@ -1,0 +1,24 @@
+@import 'bootstrap';
+
+$import-google-fonts: false;
+@import 'semantic-ui';
+
+
+.flexbox-wrapper {
+  display: flex;
+}
+
+.flexbox-wrapper > .sidebar {
+  flex: 0 0 auto;
+  width: 260px;
+}
+
+.flexbox-wrapper > .content {
+  flex: 1 1 auto;
+}
+
+.ui.container {
+  margin: 3em 3em 0 3em !important;
+  width: auto !important;
+  max-width: 960px !important;
+}
