@@ -1,0 +1,63 @@
+<%= form_for propertie, multipart: true do |f| %>
+  <div id='item_js'>
+
+    <div class='col text-center' style='margin: 60px 0px 60px 0px;'>
+      <h1>Cadastro de Imóvel</h1>
+    </div>
+
+    <div class='row' style='margin: 20px 0px 20px 0px;'>
+      <div class='col'>
+        <label>Tipo</label><br>
+        <%= f.select :property_type, {'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] },
+            { include_blank: 'Selecione o Tipo' },
+            { class: 'form-control required types_select' } %>
+      </div>
+
+      <div class='col'>
+        <label>Tipo</label><br>
+        <%= f.select :property_type, {'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] },
+            { include_blank: 'Selecione o Tipo' },
+            { class: 'form-control required types_select' } %>
+      </div>
+
+      <div class='col'>
+        <label>Tipo</label><br>
+        <%= f.select :property_type, {'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] },
+            { include_blank: 'Selecione o Tipo' },
+            { class: 'form-control required types_select' } %>
+      </div>
+    </div>
+
+    <div class='row' style='margin: 20px 0px 20px 0px;'>
+      <div class='col'>
+        <label>Tipo</label><br>
+        <%= f.select :property_type, {'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] },
+            { include_blank: 'Selecione o Tipo' },
+            { class: 'form-control required types_select' } %>
+      </div>
+
+      <div class='col'>
+        <label>Tipo</label><br>
+        <%= f.select :property_type, {'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] },
+            { include_blank: 'Selecione o Tipo' },
+            { class: 'form-control required types_select' } %>
+      </div>
+
+      <div class='col'>
+        <label>Tipo</label><br>
+        <%= f.select :property_type, {'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] },
+            { include_blank: 'Selecione o Tipo' },
+            { class: 'form-control required types_select' } %>
+      </div>
+    </div>
+
+    <div class='row' style='margin: 20px 0px 20px 0px;'>
+      <div class='col'>
+        <div style='float: right; margin-top: 40px;'>
+          <%= link_to 'Cancelar', root_path, class: 'btn btn-outline-primary' %>
+          <%= f.submit 'Salvar', class: 'btn btn-outline-success' %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

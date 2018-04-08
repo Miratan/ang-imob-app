@@ -1,4 +1,4 @@
-class IndexController < ApplicationController
+class PropertiesController < ApplicationController
   def index
     photo = 'http://multimidia.lopes.com.br/6/14826/lancamento-libero-residencial-spa-19.jpg'
 
@@ -17,5 +17,9 @@ class IndexController < ApplicationController
     }
 
     @items = [item, item, item, item, item, item, item, item, item, item, item, item]
+  end
+
+  def new
+    @propertie = Propertie.new
   end
 end

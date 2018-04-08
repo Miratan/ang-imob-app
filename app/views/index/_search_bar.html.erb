@@ -1,0 +1,51 @@
+<div id='search_bar_js'>
+  <div class='row'>
+    <div class='col'>
+      <label>Tipo</label>
+      <br>
+      <%= select_tag 'value',
+          options_for_select({'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] }),
+          class: 'form-control cursor-pointer' %>
+    </div>
+
+    <div class='col'>
+      <label>Finalidade</label>
+      <br>
+      <%= select_tag 'value',
+          options_for_select({'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] }),
+          class: 'form-control cursor-pointer' %>
+    </div>
+
+    <div class='col'>
+      <label>Cidade</label>
+      <br>
+      <%= select_tag 'value',
+          options_for_select({'Pelotas' => 1, 'Rio Grande' => 2 }.map { |v, k| [v, k] }),
+          class: 'form-control cursor-pointer cities_select' %>
+    </div>
+
+    <div class='col'>
+      <label>Bairro</label>
+      <br>
+      <%= select_tag 'value',
+          options_for_select(['Todos']),
+          class: 'form-control cursor-pointer neighborhood_select',
+          disabled: :true %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col'>
+      <button style='margin-top: 25px;' type='button' class='btn btn-outline-info' data-toggle='modal' data-target='#loginModal'>
+        <i class="user outline icon"></i> Acessar
+      </button>
+    </div>
+
+    <div class='col' style='float: right;text-align: -webkit-right;'>
+      <button style='margin-top: 25px;' type='button' class='btn btn-outline-success'>
+        <i class='search icon'></i> Buscar
+      </button>
+    </div>
+
+  </div>
+</div>

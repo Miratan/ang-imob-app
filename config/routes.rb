@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :indexs
 
+  resource :properties
+
   # get '/admin/sign_in', to: redirect('/admins/index')
 end

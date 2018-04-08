@@ -1,0 +1,31 @@
+<div class='row' style='margin-top: 60px;'>
+
+  <% @items.each do |item| %>
+    <div class='col' style='margin: 20px 0px 20px 0px;'>
+      <div class='card' style='width: 25rem;'>
+        <img class='card-img-top' style='padding: 15px 15px 15px 15px;' src="<%= "#{@items.first[:photo]}" %>" alt='Imóvel'>
+        <div class='card-body'>
+          <h5 class='card-title'>Apartamento R$ <%= item[:value] %> <%= item[:goal] %></h5>
+          <p class='card-text'><%= item[:description] %></p>
+          <div style='margin-bottom: 10px;'>
+            <div class='row'>
+              <div class='col'>
+                <i class='bed large icon'></i> <span style='font-weight: bold;'><%= item[:bedroom] %></span>
+              </div>
+              <div class='col'>
+                <i class='bath large icon'></i> <span style='font-weight: bold;'><%= item[:bathroom] %></span>
+              </div>
+              <div class='col'>
+                <i class='expand large icon'></i> <span style='font-weight: bold;'><%= item[:area] %> m²</span>
+              </div>
+            </div>
+          </div>
+          <a href='#' style='float: right;' class='btn btn-outline-success'>
+            <i class="search plus icon"></i> Detalhes
+          </a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>

@@ -1,69 +1,19 @@
 <% if !admin_signed_in? %>
-  <div class='text-center' style='padding: 30px 0px 30px 0px;'>
-    <div class='container'>
-      <h1>Ângela Katarine - Negócios Imobiliários</h1>
-    </div>
+
+  <%= render 'shared/header' %>
+
+  <div class='container' style='margin-bottom: 50px;'>
+
+    <%= render 'search_bar' %>
+
+    <%= render 'items' %>
+
   </div>
 
-  <div class='col-xs-3'>
-    <button style='margin-top: 25px;' type='button' class='btn btn-outline-info' data-toggle='modal' data-target='#loginModal'>
-      <span class='glyphicon glyphicon-home'></span> Acessar
-    </button>
-  </div>
 <% else %>
 
-  <div class='row'>
-    <div class='twelve wide column'>
-      <div class='twelve wide column'>
-        TESTE
-      </div>
-    </div>
-  </div>
+    TESTE
 
 <% end %>
-
-<!--div id='search_bar_js' class='container'>
-  <div class='col-xs-3'>
-    <label>Tipo</label>
-    <br>
-    <%= select_tag 'value',
-        options_for_select({'Aluguel' => 1, 'Venda' => 2}.map { |v, k| [v, k] }),
-        class: 'form-control cursor-pointer' %>
-  </div>
-
-  <div class='col-xs-3'>
-    <label>Finalidade</label>
-    <br>
-    <%= select_tag 'value',
-        options_for_select({'Aluguel' => 1, 'Venda' => 2}.map { |v, k| [v, k] }),
-        class: 'form-control cursor-pointer' %>
-  </div>
-
-  <div class='col-xs-3'>
-    <label>Cidade</label>
-    <br>
-    <%= select_tag 'value',
-        options_for_select({'Aluguel' => 1, 'Venda' => 2}.map { |v, k| [v, k] }),
-        class: 'form-control cursor-pointer cities_select' %>
-  </div>
-
-  <div class='col-xs-3'>
-    <label>Bairro</label>
-    <br>
-    <fieldset disabled>
-      <%= select_tag 'value',
-          options_for_select({'Aluguel' => 1, 'Venda' => 2}.map { |v, k| [v, k] }),
-          class: 'form-control cursor-pointer neighborhood_select' %>
-    </fieldset>
-  </div>
-
-  <div class='col-xs-3' style='float: right;text-align: -webkit-right;'>
-    <button style='margin-top: 25px;' type='button' class='btn btn-success'>
-      <span class='glyphicon glyphicon-search'></span> Buscar
-    </button>
-  </div>
-
-</div-->
-
 
 <%= render 'login_modal' %>
